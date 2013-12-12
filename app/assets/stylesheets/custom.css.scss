@@ -1,0 +1,314 @@
+@import "bootstrap";
+
+/**********************/
+/* SECTION: CSS RESET */
+/**********************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************************/
+/* SECTION: GENERAL STYLES; */
+/****************************/
+
+body {
+  font-family: "source-sans-pro", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  font-family: "adelle", "source-sans-pro", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.headline {
+  font-size: 2.20em;
+  padding-top: 35px;
+  margin-bottom: 45px;
+}
+
+.mega-headline {
+  font-size: 3.8em;
+  padding-top: 45px;
+  margin-bottom: 25px;
+}
+
+.white {
+  color: white;
+}
+
+.clean-paragraph {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+.full-width-blue-line {
+  border-bottom: 1px solid #4F647F;
+}
+
+.full-width-gray-line {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.big-white-headline {
+  margin: 25px 0 16px 0;
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.big-yellow-headline {
+  margin: 25px 0 16px 0;
+  font-size: 3.5em;
+  color: #ffc402;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 8%;
+}
+
+.left {
+  max-width: 37%;
+  float: left;
+  margin-right: 10%;
+}
+
+.right {
+  max-width: 37%;
+  float: left;
+}
+
+.semi-left {
+  float: left;
+  width: 48%;
+  margin-right: 20px;
+}
+
+.semi-right {
+  float: left;
+  padding-left: 20px;
+  max-width: 27%;
+}
+
+@media only screen and (max-width: 850px) {
+  .left, .right {
+    max-width: 100%;
+  }
+
+  .semi-left {
+    width: 100%;
+  }
+
+  .semi-right {
+    padding-top: 20px;
+    padding-left: 0;
+    max-width: 90%;
+    float: left;
+  }
+
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 100%;
+  }
+
+  .no-mobile {
+    display: none;
+  }
+}
+
+/* From http://css-tricks.com/snippets/css/clear-fix/ */
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Lead Capture */
+.lead-capture-section{
+  text-align: center;
+}
+
+.lead-capture-section .next-class-info {
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.lead-capture-section .email-placeholder {
+  min-width: 300px;
+  margin: 0;
+  vertical-align: bottom;
+  padding: 16px 60px 16px 13px;
+  border: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px; 
+  -moz-border-radius: 2px; 
+}
+
+.main-button {
+  color: #cb7315;
+  
+  /* Gradient made with http://gradients.glrzad.com/ */
+  background-image: linear-gradient(bottom, rgb(255,193,5) 28%, rgb(255,226,80) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(255,193,5) 28%, rgb(255,226,80) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(255,193,5) 28%, rgb(255,226,80) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(255,193,5) 28%, rgb(255,226,80) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(255,193,5) 28%, rgb(255,226,80) 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.28, rgb(255,193,5)),
+    color-stop(1, rgb(255,226,80))
+  );
+
+  margin: 0;
+  padding: 15px 26px 13px 26px;
+  font-size: 0.9em;
+  border: none;
+  vertical-align: bottom;
+  border-radius: 2px;
+  -webkit-border-radius: 2px; 
+  -moz-border-radius: 2px;
+
+  cursor: pointer;
+}
+
+.general-button {
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 768px) {
+  .main-button.general-button {
+    padding: 12px 10px 12px 6px;
+  }
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.lead-capture-section .email-disclaimer {
+  color: white;
+  margin-top: 8px;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lead-capture-section .collapse-button {
+  margin-left: -5px;
+  border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .lead-capture-section .email-placeholder {
+      min-width: 220px;
+      padding: 10px 10px 10px 6px;
+    }
+
+    .main-button {
+      font-size: .7em;
+      padding: 10px 20px 10px 20px;
+    }
+}
+
+
+/********************/
+/* SECTION: WELCOME */
+/********************/
+
+#welcome {
+  background-color: #223752;
+  padding-bottom: 60px;
+}
+
+.white-logo {
+  padding: 7px 0;
+  display: block;
+  margin: 0 auto;
+  height: 20px;
+}
+
+.welcome-subheadline {
+  color: #92A7C0;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  margin-bottom: 80px;
+}
+
+/******************/
+/* SECTION: PRESS */
+/******************/
+
+#press-logos {
+  background: white;
+}
+
+#press-logos > img {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  #press-logos > img {
+    height: 28px;
+  }
+}
+
