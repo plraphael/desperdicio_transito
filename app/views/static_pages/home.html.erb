@@ -1,16 +1,20 @@
 
 <div id="main">
   <div id="welcome">
-    <h1 class="white-logo">Desperdicio Transito SP</h1>
-    <div class="full-width-blue-line"></div>
-    <div class="lead-capture-section">
-      <h1 class="big-white-headline">Os Paulistanos DESPERDIÇARAM </h1>
-      <h1 class="big-yellow-headline"><%= number_to_currency_br(@daily) %> </h1>
-      <p class="big-white-headline">HOJE, no congestionamento.</p>
+    <h1 class="titulo">Desperdicio Transito SP</h1>
+    <div>
+      <h1>Os Paulistanos DESPERDIÇARAM </h1>
+      <h1 class="grana dia"><%= number_to_currency_br(@daily) %> </h1>
+      <h1>HOJE, no congestionamento.</h1>
 
-      <h1 class="big-yellow-headline">SEMANA: <%= number_to_currency_br(@weekly) %></h1>
-      <h1 class="big-yellow-headline">MES: <%= number_to_currency_br(@monthly) %></h1>
-
+      <div class="grana semana">
+        <h1><%= number_to_currency_br(@weekly) %></h1>
+        <h3> na semana</h3>
+      </div>
+      <div class="grana mes">
+        <h1><%= number_to_currency_br(@monthly)%></h1>
+        <h3> no mês</h3>
+      </div>
     </div>
   </div>
 
